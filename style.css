@@ -1,0 +1,92 @@
+/*
+ * Globals
+ */
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+  font-weight: 200;
+}
+
+.subtitle {
+  color: #888;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background: #031121;
+  color: #333;
+}
+.header-container {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background-color: #0a275b;
+  padding-bottom: 0px;
+}
+
+
+.header-container-wrapper{
+  min-height: 100%;
+  height: auto !important;
+  background: #031121;
+}
+.header-container-wrapper .container {
+  padding-bottom: 80px;
+}
+
+.holder {
+  background: #fff;
+  max-width: 1000px;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.wizard {
+  margin-bottom: 50px;
+}
+
+.wizard .step {
+  padding: 5px;
+  background: #999;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+}
+.wizard .step.active {
+  padding: 5px;
+  background: #f76f0f;
+  text-align: center;
+  color: white;
+}
+
+.btn.btn-booking i {
+  font-size: 72px;
+  padding: 10px;
+  font-style: normal;
+}
+
+.mastfoot {
+  color: white;
+  text-align: center;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}\

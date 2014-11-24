@@ -3,7 +3,7 @@
 {% set step = 2 %}
 
 {% block book_content %}
-<div class="row">
+<div class="row icons">
   {% for mku in mkus %}
   <div class="col-sm-4">
     <a href="{{path('booking_home')}}login?mkuid={{mku.mkuid}}" class="btn btn-default btn-block btn-booking">
@@ -13,5 +13,10 @@
     </a>
   </div>
   {% endfor %}
+</div>
+<div class="row">
+  <div class="col-sm-10">
+    <a href="{{path('booking_home')}}" class="btn btn-default btn-back">&laquo; Back to Item Selection</a>
+  </div>
 </div>
 {% endblock %}

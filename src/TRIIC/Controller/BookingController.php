@@ -45,7 +45,10 @@ class BookingController implements ControllerProviderInterface
             if ($app['triic.user']->auth && $app['request']->get('stay') != 'true') {
                 return $app->redirect($app['url_generator']->generate('booking_home').$app['request']->get('mkuid'));
             }
-            return $app['twig']->render('booking/login.html');
+            if (!($details = $app['db']->fetchAssoc("SELECT * FROM product_mku m INNER JOIN products p ON p.pid = m.pid WHERE mkuid = ?", array($app['request']->get('mkuid'))))) {
+                $app->abort(404, "Item $mkuid does not exist.");
+            }
+            return $app['twig']->render('booking/login.html', array('pid' => $details['pid']));
         });
         $controllers->post('/login', function (Application $app) {
             if ($app['triic.user']->auth && $app['request']->get('stay') != 'true') {

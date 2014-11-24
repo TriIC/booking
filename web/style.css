@@ -38,7 +38,7 @@ body {
   background: #031121;
 }
 .header-container-wrapper .container {
-  padding-bottom: 80px;
+  padding-bottom: 30px;
 }
 
 .holder {
@@ -49,7 +49,7 @@ body {
 }
 
 .wizard {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .wizard .step {
@@ -65,6 +65,9 @@ body {
   text-align: center;
   color: white;
 }
+.btn-back {
+  background: #eee;
+}
 
 .btn.btn-booking i {
   font-size: 72px;
@@ -77,6 +80,10 @@ body {
   text-align: center;
 }
 
+
+.row.icons {
+  padding-bottom: 20px;
+}
 
 /*
  * Affix and center

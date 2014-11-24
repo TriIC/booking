@@ -6,7 +6,9 @@ $(function(){
 
 	var bookedDates = [];
 
-	$.get('v1/dates/' + window.location.pathname.substring(6), function(dates) {
+	var url = /.*?\/([0-9]+)/i.exec(window.location.pathname);
+
+	$.get('v1/dates/' + url[1], function(dates) {
 		$.each(dates, function(index, date){
 			var start = new Date(date.booking_from).valueOf();
 			var end = new Date(date.booking_to).valueOf() + 1;

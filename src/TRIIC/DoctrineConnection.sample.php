@@ -3,7 +3,7 @@
     This is the database connection information.
     Please do not commit this to a git repository.
 */
-namespace EEMS;
+namespace TRIIC;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 use Silex\Provider\DoctrineServiceProvider;

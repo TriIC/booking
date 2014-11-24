@@ -128,17 +128,19 @@ class BookingController implements ControllerProviderInterface
                 $error = "Item is booked for selected time region.";
             }
 
-            $details['user'] = $app['triic.user']->username;
-            $details['userfname'] = $app['triic.user']->getFullName();
-            if ($app['local'] !== true) {
-                $mailer = $app['twig']->render('email/new_booking.html', array('details'=>$details));
-
-                $headers  = "From: TriIC Admin<triathlon@imperial.ac.uk>\r\n";
-                $headers .= "Content-type: text/html\r\n";
-                mail('dm1911@ic.ac.uk', 'TriIC - New Booking', $mailer, $headers);
-            }
+            
 
             if (!isset($error)) {
+                $details['user'] = $app['triic.user']->username;
+                $details['userfname'] = $app['triic.user']->getFullName();
+                if ($app['local'] !== true) {
+                    $mailer = $app['twig']->render('email/new_booking.html', array('details'=>$details));
+
+                    $headers  = "From: TriIC Admin<triathlon@imperial.ac.uk>\r\n";
+                    $headers .= "Content-type: text/html\r\n";
+                    mail('dm1911@ic.ac.uk', 'TriIC - New Booking', $mailer, $headers);
+                }
+                
                 $app['db']->insert('bookings', array(
                     'mkuid' => $mkuid,
                     'username' => $app['triic.user']->username,
@@ -151,7 +153,6 @@ class BookingController implements ControllerProviderInterface
 
             return $app['twig']->render('booking/form.html', array(
                 'details' => $details,
-                'user' => 'dm1911',
                 'error' => @$error
             ));
         });

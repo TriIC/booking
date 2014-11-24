@@ -1,0 +1,12 @@
+{% extends '_skeleton.html' %}
+
+
+{% block content %}
+	<div class="row wizard">
+		<div class="col-xs-6 step{% if step == 1 %} active{% endif %}">Authenticate</div>
+		<div class="col-xs-6 step{% if step == 2 %} active{% endif %}">List Bookings</div>
+	</div>
+
+	{%block book_content%}{%endblock%}
+{% endblock %}
+

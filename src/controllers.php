@@ -11,3 +11,4 @@ $app->get('/', function (Application $app) {
 
 
 $app->mount('/book', new TRIIC\Controller\BookingController());
+$app->mount('/account', new TRIIC\Controller\UserController());

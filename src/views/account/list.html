@@ -1,0 +1,18 @@
+{% extends 'account/_skeleton.html' %}
+
+{% set step = 2 %}
+
+{% block book_content %}
+<div class="row">
+  <div class="col-md-12">
+    <h2>Bookings for {{user.username}} <small><a href="{{path('user_home')}}login?stay=true">Change User</a></small></h2>
+    {% for booking in bookings %}
+      <div style="">
+        <h3>{{booking.name}} <small>{{booking.title}}</small></h3>
+        <p>From {{booking.booking_from}} to {{booking.booking_to}} (both dates included)</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

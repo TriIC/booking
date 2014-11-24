@@ -1,11 +1,10 @@
-{% extends 'booking/_skeleton.html' %}
+{% extends 'account/_skeleton.html' %}
 
-{% set step = 3 %}
+{% set step = 1 %}
 
 {% block book_content %}
 <div class="row">
 <div class="col-md-12">
-  <p>Please enter your Imperial College login details to fulfil this order.</p>
   <p>Your login is safe, and we will not store your details</p><br />
   {% if error %}<div class="alert alert-danger">{{error}}</div>{%endif%}
   <form class="form-horizontal" role="form" method="POST">

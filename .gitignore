@@ -2,3 +2,6 @@
 *.DS_Store
 vendor
 src/TRIIC/DoctrineConnection.php
+
+*.py
+*.pyc

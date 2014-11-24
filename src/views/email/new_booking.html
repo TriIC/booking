@@ -1,0 +1,38 @@
+<h2>Triathlon Booking System</h2>
+
+<p>A new booking has been made. <b>Please contact to arrange a delivery time!</b></p>
+
+<table border="0" cellpadding="5px" cellspacing="5px">
+	<tr>
+		<td>
+			<b>Item</b>
+		</td>
+		<td>
+			{{details.name}} - {{details.title}}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>User</b>
+		</td>
+		<td>
+			{{details.user}} ({{details.userfname}}) - <a href="mailto:{{details.user}}@imperial.ac.uk?Subject=Your Triathlon Society Booking Request">send email</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Start Date</b>
+		</td>
+		<td>
+			{{details.start_date}}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>End Date</b>
+		</td>
+		<td>
+			{{details.end_date}}
+		</td>
+	</tr>
+</table>

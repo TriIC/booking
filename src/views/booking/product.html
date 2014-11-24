@@ -1,0 +1,16 @@
+{% extends 'booking/_skeleton.html' %}
+
+{% set step = 1 %}
+
+{% block book_content %}
+<div class="row">
+  {% for product in products %}
+  <div class="col-sm-4">
+    <a href="{{path('booking_home')}}p/{{product.pid}}" class="btn btn-default btn-block btn-booking"><i class="{{product.icon}}"></i><br />
+    {{product.name}}<br />
+    <!-- <span style="color: green"><small>2 of 5 Available</small></span> -->
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Imperial Triathlon Club (TriIC) - Booking System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{path('home')}}css/datepicker.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{path('home')}}style.css" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="header-container-wrapper">
+    <div class="header-container">
+      <div class="masthead clearfix">
+        <div class="inner text-center">
+          <img style="max-width: 100%" src="{{path('home')}}logo.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container holder">
+        <div class="row">
+        	<div class="col-md-12">
+            <div class="text-center">
+              <h2 style="margin-top: 0; padding-top: 0">Triathlon Booking System</h2>
+              <p class="subtitle">All members are entitled to booking our kit; Please complete this quick form to begin the proccess!</p>
+            </div>
+            
+        		{% block content %}{% endblock %}
+        	</div>
+        </div>
+
+    </div>
+  </div>
+
+  <div class="mastfoot">
+    <div class="inner">
+      <p>Created by darioml<br />
+      <small>&copy;2014 TriIC</small></p>
+    </div>
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="{{path('home')}}js/bootstrap-datepicker.js"></script>
+    <script src="{{path('home')}}js/page.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{% extends '_skeleton.html' %}
+
+{% block content %}
+<div class="row" style="margin-top: 50px;">
+  <div class="col-sm-offset-2 col-sm-4">
+    <a href="{{path('home')}}account" class="btn btn-default btn-block btn-booking">
+      <i class="fa fa-list"></i><br />
+      My Bookings
+    </a>
+  </div>
+  <div class="col-sm-4">
+    <a href="{{path('home')}}book" class="btn btn-default btn-block btn-booking">
+      <i class="fa fa-calendar"></i><br />
+      New Booking
+    </a>
+  </div>
+</div>
+{% endblock %}

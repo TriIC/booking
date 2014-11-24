@@ -1,0 +1,17 @@
+{% extends 'booking/_skeleton.html' %}
+
+{% set step = 2 %}
+
+{% block book_content %}
+<div class="row">
+  {% for mku in mkus %}
+  <div class="col-sm-4">
+    <a href="{{path('booking_home')}}login?mkuid={{mku.mkuid}}" class="btn btn-default btn-block btn-booking">
+    	{% if mku.icon_letter %}<i>{{mku.icon_letter}}</i>{% else %}<i class="{{mku.icon}}"></i>{% endif %}<br />
+    	{{mku.title}}
+		    <!-- <span style="color: green"><small>2 of 5 Available</small></span> -->
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

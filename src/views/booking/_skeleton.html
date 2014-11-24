@@ -1,0 +1,14 @@
+{% extends '_skeleton.html' %}
+
+
+{% block content %}
+	<div class="row wizard">
+		<div class="col-xs-3 step{% if step == 1 %} active{% endif %}">Select Product</div>
+		<div class="col-xs-3 step{% if step == 2 %} active{% endif %}">Select Size</div>
+		<div class="col-xs-3 step{% if step == 3 %} active{% endif %}">Authenticate</div>
+		<div class="col-xs-3 step{% if step == 4 %} active{% endif %}">Complete Form</div>
+	</div>
+
+	{%block book_content%}{%endblock%}
+{% endblock %}
+

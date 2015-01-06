@@ -81,7 +81,7 @@ body {
 }
 
 
-.row.icons {
+.row.icons .col-sm-4 {
   padding-bottom: 20px;
 }
 

@@ -139,6 +139,8 @@ class BookingController implements ControllerProviderInterface
                     $headers  = "From: TriIC Admin<triathlon@imperial.ac.uk>\r\n";
                     $headers .= "Content-type: text/html\r\n";
                     mail('dm1911@ic.ac.uk', 'TriIC - New Booking', $mailer, $headers);
+                    mail('ruben.tomlin11@ic.ac.uk', 'TriIC - New Booking', $mailer, $headers);
+                    mail('triathlon@ic.ac.uk', 'TriIC - New Booking', $mailer, $headers);
                 }
                 
                 $app['db']->insert('bookings', array(
